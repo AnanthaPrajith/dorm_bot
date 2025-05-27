@@ -27,7 +27,7 @@ soup = BeautifulSoup(html, "html.parser")
 offers_div = soup.find("div", class_="section mt-4 mb-4")
 
 # Check if "KEINE ANGEBOTE" is shown
-if offers_div and "NO OFFERS" in offers_div.text.upper():
+if offers_div and "KEINE ANGEBOT" in offers_div.text.upper():
     print("❌ No dorms available – no email sent.")
 else:
     print("✅ Dorm offer found – sending email.")
